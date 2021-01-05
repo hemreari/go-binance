@@ -18,6 +18,9 @@ func (s *GetAccountService) Do(ctx context.Context, opts ...RequestOption) (res 
 		//endpoint: "/api/v3/account",
 		secType: secTypeSigned,
 	}
+
+	// change global endpoint to trbinance endpoint
+	s.c.BaseURL = "https://www.trbinance.com"
 	data, err := s.c.callAPI(ctx, r, opts...)
 	if err != nil {
 		return nil, err

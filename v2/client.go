@@ -160,8 +160,8 @@ func NewClient(apiKey, secretKey string) *Client {
 	return &Client{
 		APIKey:    apiKey,
 		SecretKey: secretKey,
-		BaseURL:   "https://www.trbinance.com",
-		//BaseURL:    "https://api.binance.com",
+		//BaseURL:   "https://www.trbinance.com",
+		BaseURL:    "https://api.binance.com",
 		UserAgent:  "Binance/golang",
 		HTTPClient: http.DefaultClient,
 		Logger:     log.New(os.Stderr, "Binance-golang ", log.LstdFlags),
